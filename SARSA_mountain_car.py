@@ -20,7 +20,7 @@ def get_discrete_state(state, observation_space_low, discrete_bins_size):
     return tuple(discrete_state.astype(int))
 
 def eps_decay(eps_0, episode, epsDecayEpisode):
-    eps = eps_0 * np.power(0.2,(episode/epsDecayEpisode))
+    eps = eps_0 * np.power(0.1,(episode/epsDecayEpisode))
     return eps
 
 def main():
